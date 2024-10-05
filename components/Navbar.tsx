@@ -226,7 +226,7 @@ const NavbarContainer = styled.div<NavbarContainerProps>`
   top: 0;
   padding: 1.5rem 0;
   width: 100%;
-  height: 6rem;
+  height: 7.2rem;
   z-index: var(--z-navbar);
 
   background-color: white;
