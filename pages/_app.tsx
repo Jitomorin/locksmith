@@ -100,7 +100,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <ColorModeScript />
       <GlobalStyle />
-      {!loading ? (
+      {loading ? (
         <Spinner />
       ) : (
         <Providers>
