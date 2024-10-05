@@ -125,16 +125,21 @@ const CustomButton = styled(Button)`
 const NavItemList = styled.div`
   display: flex;
   list-style: none;
+  color: white;
   div {
     display: flex;
   }
   svg {
+    color: white;
     width: 20px;
   }
   span {
+    color: white;
     margin-left: 1rem;
   }
   p {
+    color: white;
+
     font-weight: 800;
   }
   ${media("<desktop")} {
@@ -229,7 +234,7 @@ const NavbarContainer = styled.div<NavbarContainerProps>`
   height: 7.2rem;
   z-index: var(--z-navbar);
 
-  background-color: white;
+  background-color: #550202;
 
   visibility: ${(p) => (p.hidden ? "hidden" : "visible")};
   transform: ${(p) =>
