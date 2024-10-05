@@ -4,7 +4,7 @@ import styled, { keyframes } from "styled-components";
 
 const spinBeforeAnimation = keyframes`
   from {
-    box-shadow: 0 0 0 -5.6px rgb(255,175,1);
+    box-shadow: 0 0 0 -5.6px rgb(240, 13, 6);
   }
 `;
 
@@ -32,9 +32,9 @@ const SpinnerElement = styled.div`
   height: 80px; /* Adjust the size as needed */
   animation: ${spinBeforeAnimation} 0.5s backwards,
     ${spinAnimation} 1.25s 0.5s infinite ease;
-  border: 10px solid rgb(255, 175, 1);
+  border: 10px solid #0a3161;
   border-radius: 50%;
-  box-shadow: 0 -60px 0 -10px rgb(255, 175, 1);
+  box-shadow: 0 -60px 0 -10px #751318;
 `;
 
 const Spinner: React.FC = () => {
