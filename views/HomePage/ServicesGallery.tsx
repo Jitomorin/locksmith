@@ -45,7 +45,7 @@ const TABS = [
   {
     title: "Your Success is Our Success",
     description:
-      "At Core Maestro Management, your success is our driving force. We celebrate your achievements and share in your challenges, demonstrating our commitment to your organization's growth.",
+      "At Oscar's Lock and Key, your success is our driving force. We celebrate your achievements and share in your challenges, demonstrating our commitment to your organization's growth.",
     imageUrl: "/success.webp",
     baseColor: "21,35,62",
     secondColor: "21,35,62",

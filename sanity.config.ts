@@ -23,7 +23,7 @@ import { previewDocumentNode } from "./plugins/previewPane";
 import privacyPolicyType from "./sanity/schemas/privacy-policy";
 
 const title =
-  process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || "Core Maestro Management";
+  process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || "Oscar's Lock and Key";
 
 export default defineConfig({
   basePath: "/cms",

@@ -27,10 +27,10 @@ export default function ServicesPage(props: ServiceProps) {
         <YoutubeVideo url="https://www.youtube.com/watch?v=BggrpKfqh1c" /> */}
         {/* "Welcome to [Your Company Name], your trusted partner in human resources management. At the heart of every thriving organization lies a strong and well-managed workforce, and that's where we come in. Our dedicated team of HR experts is committed to helping businesses of all sizes navigate the ever-evolving landscape of human resources with ease. Whether you're seeking assistance with talent acquisition, employee benefits, compliance, or any other HR-related need, we have the expertise and solutions to streamline your operations and empower your workforce. With a focus on delivering personalized services tailored to your unique business goals, we aim to foster a culture of growth, productivity, and employee well-being. Explore our comprehensive range of HR services designed to drive your organization's success." */}
         <ServicesSection title="We offer these professional services">
-          Choose Core Maestro Management for an approach that combines
-          experience, cost-efficiency, relationship-building, humility,
-          customization, and a dedication to continuous improvement. Your HR
-          challenges are our opportunities for success.
+          Choose Oscar's Lock and Key for an approach that combines experience,
+          cost-efficiency, relationship-building, humility, customization, and a
+          dedication to continuous improvement. Your HR challenges are our
+          opportunities for success.
         </ServicesSection>
         <div className="mb-32 grid grid-cols-1 gap-y-20 md:grid-cols-3 md:gap-x-16 md:gap-y-32 lg:gap-x-32 max-w-[90%]">
           {services.map((singleFeature, idx) => (

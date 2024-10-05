@@ -12,10 +12,10 @@ export default function CompanyFooter() {
     <>
       <Wrapper>
         <CompanyContainer>
-          <Title>Core Maestro Management</Title>
+          <Title>Oscar's Lock and Key</Title>
           <TextContainer>
             <RichText>
-              At Core Maestro Management, we are the architects of thriving
+              At Oscar's Lock and Key, we are the architects of thriving
               workplaces. Our passion lies in empowering organizations to reach
               their full potential by harnessing the power of their people.
             </RichText>

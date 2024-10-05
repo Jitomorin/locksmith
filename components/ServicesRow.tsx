@@ -25,7 +25,7 @@ const SERVICES = [
     title: "Payroll Management",
     slug: generateSlug("Payroll Management Including Payroll Software"),
     description:
-      "Core Maestro Management streamlines payroll processes, ensuring accuracy and compliance. Trust us to handle your payroll needs efficiently and hassle-free.",
+      "Oscar's Lock and Key streamlines payroll processes, ensuring accuracy and compliance. Trust us to handle your payroll needs efficiently and hassle-free.",
     imageUrl: "/payroll.png",
     href: "/services/",
     icon: faMoneyBillWave,
@@ -36,7 +36,7 @@ const SERVICES = [
     title: "HR Outsourcing",
     slug: generateSlug("HR Outsourcing"),
     description:
-      "Core Maestro Management streamlines payroll processes, ensuring accuracy and compliance. Trust us to handle your payroll needs efficiently and hassle-free.",
+      "Oscar's Lock and Key streamlines payroll processes, ensuring accuracy and compliance. Trust us to handle your payroll needs efficiently and hassle-free.",
     imageUrl: "/payroll.png",
     href: "/services/",
     icon: faHandshake,
@@ -47,7 +47,7 @@ const SERVICES = [
     title: "HR Compliance",
     slug: generateSlug("HR Compliance and Legal Advisory"),
     description:
-      "Core Maestro Management streamlines payroll processes, ensuring accuracy and compliance. Trust us to handle your payroll needs efficiently and hassle-free.",
+      "Oscar's Lock and Key streamlines payroll processes, ensuring accuracy and compliance. Trust us to handle your payroll needs efficiently and hassle-free.",
     imageUrl: "/payroll.png",
     href: "/services/",
     icon: faGavel,
@@ -58,7 +58,7 @@ const SERVICES = [
     title: "Employee Engagement",
     slug: generateSlug("Employee Engagement Survey"),
     description:
-      "Core Maestro Management streamlines payroll processes, ensuring accuracy and compliance. Trust us to handle your payroll needs efficiently and hassle-free.",
+      "Oscar's Lock and Key streamlines payroll processes, ensuring accuracy and compliance. Trust us to handle your payroll needs efficiently and hassle-free.",
     imageUrl: "/payroll.png",
     href: "/services/",
     icon: faPoll,
@@ -69,7 +69,7 @@ const SERVICES = [
     title: "HR Policies Development",
     slug: generateSlug("HR Policies and Procedures Development"),
     description:
-      "Core Maestro Management streamlines payroll processes, ensuring accuracy and compliance. Trust us to handle your payroll needs efficiently and hassle-free.",
+      "Oscar's Lock and Key streamlines payroll processes, ensuring accuracy and compliance. Trust us to handle your payroll needs efficiently and hassle-free.",
     imageUrl: "/payroll.png",
     href: "/services/",
     icon: faFileSignature,
@@ -82,7 +82,7 @@ const SHORTSERVICES = [
     title: "Payroll Management",
     slug: generateSlug("Payroll Management Including Payroll Software"),
     description:
-      "Core Maestro Management streamlines payroll processes, ensuring accuracy and compliance. Trust us to handle your payroll needs efficiently and hassle-free.",
+      "Oscar's Lock and Key streamlines payroll processes, ensuring accuracy and compliance. Trust us to handle your payroll needs efficiently and hassle-free.",
     imageUrl: "/payroll.png",
     href: "/services/",
     icon: faMoneyBillWave,
@@ -93,7 +93,7 @@ const SHORTSERVICES = [
     title: "HR Policies Development",
     slug: generateSlug("HR Policy and Procedure Development"),
     description:
-      "Core Maestro Management streamlines payroll processes, ensuring accuracy and compliance. Trust us to handle your payroll needs efficiently and hassle-free.",
+      "Oscar's Lock and Key streamlines payroll processes, ensuring accuracy and compliance. Trust us to handle your payroll needs efficiently and hassle-free.",
     imageUrl: "/payroll.png",
     href: "/services/",
     icon: faFileSignature,
