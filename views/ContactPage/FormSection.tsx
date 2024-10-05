@@ -158,7 +158,6 @@ export default function FormSection() {
           />
         </InputStack>
         <input type="hidden" name="_template" value="basic" />
-        {/* <input type="hidden" name="_next" value="https://coremaestro.co.ke/contact" /> */}
         <Button
           as="button"
           type="submit"
