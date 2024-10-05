@@ -40,11 +40,39 @@ export default function Slider() {
 
     /* When screen is less or equal to desktop */
     ${media("<largeDesktop")} {
-      font-size: 4.6rem;
+      font-size: 6rem;
       margin-top: 20rem;
     }
     /* when screen is less than tablet */
     ${media("<tablet")} {
+      font-size: 3rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      margin-top: 10rem;
+      align-self: center;
+      justify-self: center;
+    }
+  `;
+  const SubTitle = styled.div`
+    display: inline-block;
+    text-align: center;
+    align-self: center;
+    position: relative;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    color: white;
+
+    /* When screen is less or equal to desktop */
+    ${media("<largeDesktop")} {
+      font-size: 2.3rem;
+      margin-top: 5rem;
+    }
+    /* when screen is less than tablet */
+    ${media("<tablet")} {
+      font-size: 2rem;
+      margin-top: 5rem;
       margin-left: 2rem;
       margin-right: 2rem;
       align-self: center;
@@ -56,8 +84,8 @@ export default function Slider() {
     <>
       <ImageWrapper>
         <Container>
-          <Title>We are the architects of thriving workplaces</Title>
-          <ServicesRow />
+          <Title>Oscar's Lock and Key Services</Title>
+          <SubTitle>Your safety is our priority</SubTitle>
         </Container>
       </ImageWrapper>
       {/* <ServicesWrapper>

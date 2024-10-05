@@ -106,9 +106,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Providers>
           <Modals />
           <Navbar items={navItems} />
-          <StickySocialMediaBar />
           <Component {...pageProps} />
-          <CompanyFooter />
 
           <Footer />
         </Providers>

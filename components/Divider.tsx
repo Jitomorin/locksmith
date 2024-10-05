@@ -9,7 +9,6 @@ const Divider = styled.div`
   margin-right: auto;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  background-color: rgb(21, 35, 62, 0.3);
 `;
 
 export default Divider;

@@ -21,9 +21,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-type OurteamProps = { employees: Employee[] };
-
-export default function OurTeam({ employees }: OurteamProps) {
+export default function OurTeam({ testimonials }: any) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -45,11 +43,9 @@ export default function OurTeam({ employees }: OurteamProps) {
       <Separator />
       <OurteamWrapper>
         <TitleContent>
-          <Title>Meet Our Team:</Title>
+          <Title>Reviews</Title>
           <RichText>
-            Our team is a blend of diverse talents, each contributing unique
-            expertise and perspectives. Together, we form a powerhouse of HR
-            knowledge, creativity, and dedication.
+            Trusted Solutions, Satisfied Customers – See What They’re Saying!
           </RichText>
         </TitleContent>
         <SliderSeperator />
@@ -61,7 +57,7 @@ export default function OurTeam({ employees }: OurteamProps) {
           navigation={isMobile}
           loop
         >
-          {employees.map((employee, idx) => (
+          {testimonials.map((employee: any, idx: any) => (
             <SwiperSlide key={idx}>
               <OurteamCard>
                 {/* <NextImage
@@ -83,60 +79,7 @@ export default function OurTeam({ employees }: OurteamProps) {
                   </AuthorImageContainer>
                   <AuthorContent>
                     <AuthorName>{employee.fullName}</AuthorName>
-                    <AuthorTitle>{employee.position}</AuthorTitle>
-                    <AuthorSocials>
-                      {employee.linkedin && (
-                        <SocialmediaLink>
-                          <NextLink href={employee.linkedin} passHref>
-                            {/* <LinkedinIcon
-                              className="pl-6"
-                              size={40}
-                              round={true}
-                            /> */}
-                            <FontAwesomeIcon
-                              // className="text-[rgb(255, 175, 1)]"
-                              icon={faLinkedin}
-                              width={isMobile ? 30 : 20}
-                              height={isMobile ? 30 : 20}
-                            />
-                          </NextLink>
-                        </SocialmediaLink>
-                      )}
-                      {employee.facebook && (
-                        <SocialmediaLink>
-                          <NextLink
-                            href={employee.facebook}
-                            passHref
-                            className="pl-6"
-                          >
-                            {/* <FacebookIcon size={40} round={true} /> */}
-                            <FontAwesomeIcon
-                              icon={faFacebook}
-                              width={isMobile ? 30 : 20}
-                              height={isMobile ? 30 : 20}
-                            />
-                          </NextLink>
-                        </SocialmediaLink>
-                      )}
-                      {employee.instagram && (
-                        <SocialmediaLink>
-                          <NextLink href={employee.instagram} passHref>
-                            {/* <TwitterIcon size={40} round={true} /> */}
-                            {/* <Image
-                              src="/instagram_logo.png"
-                              alt="instagram_link"
-                              width={55}
-                              height={55}
-                            /> */}
-                            <FontAwesomeIcon
-                              icon={faInstagram}
-                              width={isMobile ? 30 : 20}
-                              height={isMobile ? 30 : 20}
-                            />
-                          </NextLink>
-                        </SocialmediaLink>
-                      )}
-                    </AuthorSocials>
+                    <AuthorTitle>{employee.title}</AuthorTitle>
                   </AuthorContent>
                 </AuthorContainer>
               </OurteamCard>

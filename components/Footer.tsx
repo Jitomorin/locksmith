@@ -17,21 +17,12 @@ type FooterItems = SingleFooterList[];
 const footerItems: FooterItems = [
   {
     title: "Useful Links",
-    items: [
-      { title: "Performance Management System", href: "/services" },
-      { title: "Payroll Management System", href: "/services" },
-      { title: "Learning Management System", href: "/services" },
-      { title: "ATS Job Board", href: "/services" },
-      { title: "Privacy Policy", href: "/privacy-policy" },
-    ],
+    items: [{ title: "Privacy Policy", href: "/privacy-policy" }],
   },
   {
     title: "Footer Links",
     items: [
       { title: "Home", href: "/" },
-      { title: "About Us", href: "/about" },
-      { title: "Our Services", href: "/services" },
-      { title: "HR News", href: "/posts" },
       { title: "Contact", href: "/contact" },
     ],
   },
@@ -42,109 +33,21 @@ export default function Footer() {
     <FooterWrapper>
       <FooterContainer>
         <ListContainer>
-          {/* <FooterListCompany
-            title="Core Maestro Management"
-            items={[{ title: "Privacy Policy", href: "/" }]}
-          /> */}
           {footerItems.map((singleItem) => (
             <FooterList key={singleItem.title} {...singleItem} />
           ))}
           <WaveCta />
         </ListContainer>
         <BottomBar>
-          <ShareBar>
-            <SocialmediaLink>
-              <Link
-                href="https://www.linkedin.com/company/core-maestro-management/"
-                passHref
-                target="_blank"
-              >
-                <LinkedinIcon size={50} round={true} />
-              </Link>
-            </SocialmediaLink>{" "}
-            <SocialmediaLink>
-              <Link
-                target="_blank"
-                href="https://www.instagram.com/core.maestro.management/"
-                passHref
-              >
-                {/* <TwitterIcon size={50} round={true} /> */}
-                <NextImage
-                  src="/instagram_logo.webp"
-                  alt="instagram_link"
-                  width={65}
-                  height={65}
-                />
-              </Link>
-            </SocialmediaLink>{" "}
-            <SocialmediaLink>
-              <Link
-                href="https://www.facebook.com/coremaestromanagement/"
-                passHref
-                target="_blank"
-              >
-                <FacebookIcon size={50} round={true} />
-              </Link>
-            </SocialmediaLink>
-            <SocialmediaLink>
-              <Link
-                target="_blank"
-                href="https://wa.me/message/ODRQQDIW57LEN1"
-                passHref
-              >
-                {/* <TwitterIcon size={50} round={true} /> */}
-                <NextImage
-                  src="/whatsapp_logo.webp"
-                  alt="Whatsapp Link"
-                  width={60}
-                  height={60}
-                />
-              </Link>
-            </SocialmediaLink>
-          </ShareBar>
           <div>
-            {/* <Copyright>&copy; Copyright 2023 MoCapital</Copyright> */}
-            <Copyright>
-              &copy; 2024 Copyright Core Maestro Management | Powered by{" "}
-              <Link
-                target="_blank"
-                className="hover:text-[#ffaf01]"
-                href="https://mocapital.co.ke/"
-              >
-                Mo Capital Company Limited
-              </Link>
-            </Copyright>
+            <Copyright>&copy; 2024 Copyright Oscar's Lock and Key</Copyright>
           </div>
-
-          {/* <div>
-            {" "}
-            Icons made by{" "}
-            <Link
-              href="https://www.flaticon.com/authors/md-tanvirul-haque"
-              title="Md Tanvirul Haque"
-            >
-              {" "}
-              Md Tanvirul Haque{" "}
-            </Link>{" "}
-            from{" "}
-            <Link href="https://www.flaticon.com/" title="Flaticon">
-              www.flaticon.com
-            </Link>
-          </div> */}
         </BottomBar>
       </FooterContainer>
     </FooterWrapper>
   );
 }
 
-function CompanyInfo({ title, items }: SingleFooterList) {
-  return (
-    <ListWrapper>
-      <ListHeader>{title}</ListHeader>
-      <ListDescription></ListDescription>
-    </ListWrapper>
-  );
-}
 function FooterList({ title, items }: SingleFooterList) {
   return (
     <ListWrapper>

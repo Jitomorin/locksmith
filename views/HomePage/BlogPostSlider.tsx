@@ -38,7 +38,7 @@ export default function BlogPostSlider({ posts }: BlogPostProps) {
   return (
     <Wrapper>
       <TitleContent>
-        <Title>HR News</Title>
+        <Title>Reviews</Title>
       </TitleContent>
       <Swiper
         modules={[Navigation, Autoplay, A11y]}

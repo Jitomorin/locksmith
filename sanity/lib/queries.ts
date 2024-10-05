@@ -36,6 +36,10 @@ export const indexQuery = groq`
 }`;
 export const partnersQuery = groq`
 *[_type == "partners"]`;
+export const testimonialsQuery = groq`
+*[_type == "testimonial"]`;
+export const logosQuery = groq`
+*[_type == "logo"]`;
 export const employeesQuery = groq`
 *[_type == "employee"]`;
 export const privacyPolicyQuery = groq`
@@ -137,9 +141,30 @@ export interface Employee {
   facebook?: string;
   instagram?: string;
 }
+export interface Testimonial {
+  _id: string;
+  fullName: string;
+  title: string;
+  image: {
+    _type: "image";
+    asset: {
+      _ref: string;
+    };
+  };
+  testimonial: any;
+}
 export interface Partner {
   company: string;
   website: string;
+  logo: {
+    _type: "image";
+    asset: {
+      _ref: string;
+    };
+  };
+}
+export interface Logo {
+  name: string;
   logo: {
     _type: "image";
     asset: {

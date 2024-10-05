@@ -12,6 +12,8 @@ import { schema } from "./sanity/schema";
 import authorType from "./sanity/schemas/author";
 import postType from "./sanity/schemas/post";
 import employeeType from "./sanity/schemas/employee";
+import TestimonialType from "./sanity/schemas/testimonial";
+import LogoType from "./sanity/schemas/logo";
 import settingsType from "./sanity/schemas/settings";
 import serviceType from "./sanity/schemas/service";
 import partnerType from "./sanity/schemas/partner";
@@ -30,20 +32,10 @@ export default defineConfig({
   title,
   // Add and edit the content schema in the './sanity/schema' folder
   schema: {
-    types: [
-      authorType,
-      postType,
-      settingsType,
-      employeeType,
-      serviceType,
-      categorytype,
-      partnerType,
-      privacyPolicyType,
-    ],
+    types: [TestimonialType, LogoType, serviceType, privacyPolicyType],
   },
   plugins: [
     deskTool({
-      structure: settingsStructure(settingsType),
       // `defaultDocumentNode` is responsible for adding a “Preview” tab to the document pane
       defaultDocumentNode: previewDocumentNode(),
     }),

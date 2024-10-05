@@ -14,7 +14,9 @@ export default function Cta() {
       <Container>
         <Stack>
           {/* <OverTitle>Lorem ipsum dolor sit amet</OverTitle> */}
-          <SectionTitle>Let's Build Your Thriving Workplace Today</SectionTitle>
+          <SectionTitle>
+            Don't Wait, Reach Out To Oscar's Lock & Key Services!
+          </SectionTitle>
           <Description> Contact Us Today to Get Started!</Description>
           <ButtonGroup>
             <NextLink href="contact" passHref>
@@ -117,13 +119,15 @@ const Stack = styled.div`
 // `;
 
 const CtaWrapper = styled.div`
-  background: url("/pexels-pixabay-416405.webp") no-repeat center center;
+  background: url("/1.jpg") no-repeat center center;
+  background-size: cover; /* Ensures the background image covers the entire container */
   height: 50vh;
-  min-height: 40rem;
+  min-height: 50rem;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
   /* to change later */
   ${media("<=tablet")} {
     height: 60vh;

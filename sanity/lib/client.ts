@@ -21,6 +21,8 @@ import {
   Partner,
   privacyPolicyQuery,
   PrivacyPolicy,
+  testimonialsQuery,
+  logosQuery,
 } from "./queries";
 import { createClient, type SanityClient } from "next-sanity";
 
@@ -57,6 +59,14 @@ export async function getAllPosts(client: SanityClient): Promise<Post[]> {
 }
 export async function getAllPartners(client: SanityClient): Promise<Partner[]> {
   return (await client.fetch(partnersQuery)) || [];
+}
+export async function getAllTestimonials(
+  client: SanityClient
+): Promise<Partner[]> {
+  return (await client.fetch(testimonialsQuery)) || [];
+}
+export async function getAllLogos(client: SanityClient): Promise<Partner[]> {
+  return (await client.fetch(logosQuery)) || [];
 }
 export async function getAllServices(client: SanityClient): Promise<Service[]> {
   return (await client.fetch(servicesQuery)) || [];

@@ -11,24 +11,31 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { height } from "./OpenGraphImage";
 import Link from "next/link";
 import { WhatsappIcon } from "./WhatsappIcon";
+import { useRouter } from "next/router";
 
 export default function WaveCta() {
   const { setIsModalOpened } = useNewsletterModalContext();
+  const router = useRouter();
 
   return (
     <>
       <CtaWrapper>
         <Container>
+          <Title>Get in touch</Title>
           <List>
-            <p>Saku Business park Embakasi</p>
-            <p>Mobile: +254 702 127417 / +254 718 820586</p>
+            <p>Call us or leave an email in the contact page</p>
+            <p>Mobile: +(800) 687-0480</p>
 
             {/* <p>whatsapp: +254 702 127417</p> */}
           </List>
-          <Title>Subscribe to Our Newsletter</Title>
+
           <CustomButtonGroup>
-            <SubscribeButton onClick={() => setIsModalOpened(true)}>
-              Subscribe
+            <SubscribeButton
+              onClick={() => {
+                router.push("/contact");
+              }}
+            >
+              Reach out
             </SubscribeButton>
 
             {/* <NextLink href="/features" passHref>

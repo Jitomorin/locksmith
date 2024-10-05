@@ -10,28 +10,23 @@ import Partners from "views/HomePage/Partners";
 import Divider from "components/Divider";
 import Slider from "components/Slider";
 import BlogPostSlider from "@/views/HomePage/BlogPostSlider";
-import { getAllPartners, getAllPosts, getClient } from "@/sanity/lib/client";
+import {
+  getAllPartners,
+  getAllPosts,
+  getAllServices,
+  getAllTestimonials,
+  getClient,
+} from "@/sanity/lib/client";
 import HomeBasicSection from "@/components/HomeBasicSection";
+import ServiceCard from "@/components/ServiceCard";
+import ServicesSection from "@/components/ServicesSection";
+import OurTeam from "@/views/AboutPage/OurTeam";
 
 const client = getClient();
-const tabsData = [
-  {
-    id: "tab1",
-    title: "Features",
-    content: (
-      <>
-        Features go here Lorem ipsum dolor sit amet, consectetur adipisicing
-        elit. Ea dolorem sequi, quo tempore in eum obcaecati atque quibusdam
-        officiis est dolorum minima deleniti ratione molestias numquam. Voluptas
-        voluptates quibusdam cum?
-      </>
-    ),
-  },
-  // Add more tab data as needed
-];
+
 export default function Homepage({
-  posts,
-  partners,
+  services,
+  testimonials,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <>
@@ -45,60 +40,26 @@ export default function Homepage({
       <HomepageWrapper>
         <WhiteBackgroundContainer>
           <Slider />
-          <HomeBasicSection
-            styledImage={false}
-            imageUrl="/why-choose-us.webp"
-            title="Why Choose Us:"
-            reversed
-          >
-            <p>We&apos;ve Been There and Done It</p>
-            <ul>
-              <li>
-                <strong>Experience Matters:</strong>
-                <br />
-                We understand your HR challenges because we&apos;ve navigated
-                them ourselves. Our team brings real-world experience, ensuring
-                we grasp the complexities of your industry.
-              </li>
-              <li>
-                <strong>Cost-Efficiency:</strong>
-                <br />
-                We believe in delivering exceptional value without straining
-                your budget. Our services are cost-effective, offering a high
-                return on investment for your HR needs.
-              </li>
 
-              <li>
-                <strong>Customized Solutions:</strong>
-                <br />
-                We understand that one size does not fit all. We take a
-                personalized approach to address your specific challenges,
-                ensuring our HR strategies align seamlessly with your
-                organization&apos;s objectives.
-              </li>
-            </ul>
-          </HomeBasicSection>
           <Divider />
-          {/* <Button
-            onClick={async () => {
-              var data = await getPostByCategory(
-                client,
-                "Recruitment and Talent Acquisition"
-              );
-              console.log(data);
-            }}
-          >
-            Subscribe
-          </Button> */}
-          <Partners partners={partners} />
+          <ServicesSection title="We offer these professional services"></ServicesSection>
+          <div className="mb-32 mx-auto grid grid-cols-1 gap-y-20 md:grid-cols-3 md:gap-x-16 md:gap-y-32 lg:gap-x-32 max-w-[90%]">
+            {services.map((singleFeature, idx) => (
+              <ServiceCard
+                key={singleFeature.slug?.current!}
+                title={singleFeature.title}
+                imageUrl={singleFeature.coverImage}
+                slug={singleFeature.slug?.current!}
+              />
+            ))}
+          </div>
         </WhiteBackgroundContainer>
         <DarkerBackgroundContainer>
-          <ServicesGallery />
           {/* <StyledTabs /> */}
           <Cta />
 
           {/* <ScrollableBlogPosts posts={posts} /> */}
-          {posts && <BlogPostSlider posts={posts} />}
+          <OurTeam testimonials={testimonials} />
           {/* <BlogPostSlider posts={posts} /> */}
         </DarkerBackgroundContainer>
       </HomepageWrapper>
@@ -144,7 +105,8 @@ export async function getServerSideProps() {
   return {
     props: {
       posts: await getAllPosts(client),
-      partners: await getAllPartners(client),
+      services: await getAllServices(client),
+      testimonials: await getAllTestimonials(client),
     },
   };
 }
