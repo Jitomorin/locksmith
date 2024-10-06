@@ -28,22 +28,6 @@ export default function WaveCta() {
 
             {/* <p>whatsapp: +254 702 127417</p> */}
           </List>
-
-          <CustomButtonGroup>
-            <SubscribeButton
-              onClick={() => {
-                router.push("/contact");
-              }}
-            >
-              Reach out
-            </SubscribeButton>
-
-            {/* <NextLink href="/features" passHref>
-              <OutlinedButton transparent>
-                Features <span>&rarr;</span>
-              </OutlinedButton>
-            </NextLink> */}
-          </CustomButtonGroup>
         </Container>
       </CtaWrapper>
     </>

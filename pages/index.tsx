@@ -21,6 +21,11 @@ import HomeBasicSection from "@/components/HomeBasicSection";
 import ServiceCard from "@/components/ServiceCard";
 import ServicesSection from "@/components/ServicesSection";
 import OurTeam from "@/views/AboutPage/OurTeam";
+import Tabs from "@/components/Tabs";
+import TextWrapper from "@/components/TextWrapper";
+import { PortableText } from "@portabletext/react";
+import { description } from "../lib/demo.data";
+import PostBody from "@/components/PostBody";
 
 const client = getClient();
 
@@ -44,14 +49,29 @@ export default function Homepage({
           <Divider />
           <ServicesSection title="We offer these professional services"></ServicesSection>
           <div className="mb-32 mx-auto grid grid-cols-1 gap-y-20 md:grid-cols-3 md:gap-x-16 md:gap-y-32 lg:gap-x-32 max-w-[90%]">
-            {services.map((singleFeature, idx) => (
+            <Tabs
+              labels={services.map((service) => service.title)}
+              services={services}
+            >
+              {services.map((singleFeature, idx) => (
+                // <ServiceCard
+                //   key={singleFeature.slug?.current!}
+                //   title={singleFeature.title}
+                //   imageUrl={singleFeature.coverImage}
+                //   slug={singleFeature.slug?.current!}
+                // />
+                <PostBody content={singleFeature?.description} />
+              ))}
+            </Tabs>
+
+            {/* {services.map((singleFeature, idx) => (
               <ServiceCard
                 key={singleFeature.slug?.current!}
                 title={singleFeature.title}
                 imageUrl={singleFeature.coverImage}
                 slug={singleFeature.slug?.current!}
               />
-            ))}
+            ))} */}
           </div>
         </WhiteBackgroundContainer>
         <DarkerBackgroundContainer>

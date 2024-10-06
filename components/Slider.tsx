@@ -6,7 +6,7 @@ export default function Slider() {
   const ImageWrapper = styled.div`
     background: url("/stock-image-1.webp");
     background-size: cover;
-    background-position: center;
+    background-position: unset;
     ${media("<=desktop")} {
       background-size: cover;
       background-repeat: no-repeat;
@@ -14,14 +14,13 @@ export default function Slider() {
   `;
 
   const Container = styled.div`
-    background: rgb(21, 35, 62, 0.6);
+    background: rgb(10, 49, 97, 0.8);
     width: 100%;
-    height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     padding: 0 0rem;
-    height: 93.5vh;
+    height: 300px;
   `;
 
   const Title = styled.div`
@@ -35,20 +34,18 @@ export default function Slider() {
     margin-bottom: 2rem;
     margin-right: 5rem;
     margin-left: 5rem;
-    margin-top: 20rem;
+    margin-top: 3rem;
     color: white;
 
     /* When screen is less or equal to desktop */
     ${media("<largeDesktop")} {
       font-size: 6rem;
-      margin-top: 20rem;
     }
     /* when screen is less than tablet */
     ${media("<tablet")} {
       font-size: 3rem;
       margin-left: 2rem;
       margin-right: 2rem;
-      margin-top: 10rem;
       align-self: center;
       justify-self: center;
     }
@@ -59,7 +56,6 @@ export default function Slider() {
     align-self: center;
     position: relative;
     font-size: 3rem;
-    margin-bottom: 2rem;
     margin-right: 5rem;
     margin-left: 5rem;
     color: white;
@@ -67,12 +63,10 @@ export default function Slider() {
     /* When screen is less or equal to desktop */
     ${media("<largeDesktop")} {
       font-size: 2.3rem;
-      margin-top: 5rem;
     }
     /* when screen is less than tablet */
     ${media("<tablet")} {
       font-size: 2rem;
-      margin-top: 5rem;
       margin-left: 2rem;
       margin-right: 2rem;
       align-self: center;
