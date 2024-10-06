@@ -26,6 +26,7 @@ import TextWrapper from "@/components/TextWrapper";
 import { PortableText } from "@portabletext/react";
 import { description } from "../lib/demo.data";
 import PostBody from "@/components/PostBody";
+import { useRouter } from "next/router";
 
 const client = getClient();
 
@@ -33,6 +34,7 @@ export default function Homepage({
   services,
   testimonials,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -48,30 +50,16 @@ export default function Homepage({
 
           <Divider />
           <ServicesSection title="We offer these professional services"></ServicesSection>
-          <div className="mb-32 mx-auto grid grid-cols-1 gap-y-20 md:grid-cols-3 md:gap-x-16 md:gap-y-32 lg:gap-x-32 max-w-[90%]">
-            <Tabs
-              labels={services.map((service) => service.title)}
-              services={services}
-            >
-              {services.map((singleFeature, idx) => (
-                // <ServiceCard
-                //   key={singleFeature.slug?.current!}
-                //   title={singleFeature.title}
-                //   imageUrl={singleFeature.coverImage}
-                //   slug={singleFeature.slug?.current!}
-                // />
-                <PostBody content={singleFeature?.description} />
-              ))}
-            </Tabs>
-
-            {/* {services.map((singleFeature, idx) => (
-              <ServiceCard
-                key={singleFeature.slug?.current!}
-                title={singleFeature.title}
-                imageUrl={singleFeature.coverImage}
-                slug={singleFeature.slug?.current!}
-              />
-            ))} */}
+          <div className="mb-32 mx-auto justify-center items-center grid grid-cols-1 gap-y-20 md:grid-cols-3 md:gap-x-16 md:gap-y-32 lg:gap-x-32 max-w-[90%]">
+            {services.map((singleFeature, idx) => (
+              <ServiceButton
+                onClick={() => {
+                  router.push(`/services/${singleFeature.slug.current}`);
+                }}
+              >
+                {singleFeature.title}
+              </ServiceButton>
+            ))}
           </div>
         </WhiteBackgroundContainer>
         <DarkerBackgroundContainer>
@@ -91,6 +79,13 @@ const HomepageWrapper = styled.div`
   & > :last-child {
     margin-bottom: 15rem;
   }
+`;
+const ServiceButton = styled.button`
+  color: white;
+  background-color: #0a3161;
+  padding: 10px 10px;
+  font-weight: bold;
+  font-size: 2rem;
 `;
 
 const DarkerBackgroundContainer = styled.div`

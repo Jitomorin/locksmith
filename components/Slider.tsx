@@ -21,6 +21,9 @@ export default function Slider() {
     flex-direction: column;
     padding: 0 0rem;
     height: 300px;
+    ${media("<tablet")} {
+      height: 200px;
+    }
   `;
 
   const Title = styled.div`
@@ -55,14 +58,13 @@ export default function Slider() {
     text-align: center;
     align-self: center;
     position: relative;
-    font-size: 3rem;
     margin-right: 5rem;
     margin-left: 5rem;
     color: white;
 
     /* When screen is less or equal to desktop */
     ${media("<largeDesktop")} {
-      font-size: 2.3rem;
+      font-size: 3.3rem;
     }
     /* when screen is less than tablet */
     ${media("<tablet")} {

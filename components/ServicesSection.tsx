@@ -107,7 +107,7 @@ const AboutSectionWrapper = styled(Container)`
   align-items: center;
   padding: 0 24rem;
   flex-direction: ${(p: Props) => (p.reversed ? "row-reverse" : "row")};
-  margin: 2rem 0;
+  margin: 2rem auto;
 
   ${media("<=desktop")} {
     flex-direction: column;
