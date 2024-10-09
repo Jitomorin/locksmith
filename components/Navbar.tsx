@@ -94,7 +94,9 @@ export default function Navbar({ items }: any) {
           <NavItemList>
             <p className="var">
               {router.pathname !== "/"
-                ? `${cityObject!.city}`
+                ? `${
+                    cityObject?.city ? cityObject?.city : `24/7 Local Locksmith`
+                  }`
                 : `24/7 Local Locksmith`}
             </p>
             <div>
@@ -104,7 +106,13 @@ export default function Navbar({ items }: any) {
               <span>
                 call us:
                 {router.pathname !== "/" ? (
-                  <p>{`${cityObject!.phone}`}</p>
+                  <>
+                    {cityObject?.phone ? (
+                      <p>{cityObject?.phone}</p>
+                    ) : (
+                      <p>(800) 687-0480</p>
+                    )}
+                  </>
                 ) : (
                   <p>(800) 687-0480</p>
                 )}

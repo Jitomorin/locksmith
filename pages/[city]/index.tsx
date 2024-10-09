@@ -28,6 +28,7 @@ import { description } from "@/lib/demo.data";
 import PostBody from "@/components/PostBody";
 import { useRouter } from "next/router";
 import { cities } from "@/utils/cities";
+import { ServiceButton } from "@/pages/index";
 
 const client = getClient();
 
@@ -80,13 +81,6 @@ const HomepageWrapper = styled.div`
   & > :last-child {
     margin-bottom: 15rem;
   }
-`;
-const ServiceButton = styled.button`
-  color: white;
-  background-color: #0a3161;
-  padding: 10px 10px;
-  font-weight: bold;
-  font-size: 2rem;
 `;
 
 const DarkerBackgroundContainer = styled.div`

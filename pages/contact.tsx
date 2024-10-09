@@ -8,16 +8,12 @@ import Divider from "components/Divider";
 
 export default function ContactPage() {
   return (
-    <Page
-      imgURL="/contact.webp"
-      title="Contact Us"
-      description="Minim sint aliquip nostrud excepteur cupidatat amet do laborum exercitation cupidatat ea proident."
-    >
+    <Page imgURL="/contact.webp" title="Contact Us" description="">
       <ContactContainer>
         <InformationSection />
         <FormSection />
-        <Divider />
-        <MapSection />
+        {/* <Divider /> */}
+        {/* <MapSection /> */}
       </ContactContainer>
     </Page>
   );
