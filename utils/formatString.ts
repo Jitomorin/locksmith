@@ -14,3 +14,18 @@ export function processImageString(imageString: string) {
 export function generateSlug(title: string) {
   return title.toLowerCase().replace(/\s+/g, "-");
 }
+
+export function formatCityName(cityName: any) {
+  return cityName
+    .split("-") // Split the string by hyphen
+    .map((word: any) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize the first letter of each word
+    .join(" "); // Join the words back with spaces
+}
+
+export function getCityFromPath(url: any) {
+  // Extract the last part of the path after the last '/'
+  const citySlug = url.substring(url.lastIndexOf("/") + 1);
+
+  // Call the formatCityName function to format it properly
+  return citySlug;
+}

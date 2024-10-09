@@ -17,14 +17,21 @@ import { HamburgerIcon } from "./HamburgerIcon";
 import Logo from "./Logo";
 // import { HoverUnderlineAnimation } from 'utils/styled-animations';
 import NextImage from "next/image";
+import { cities } from "@/utils/cities";
+import { formatCityName, getCityFromPath } from "@/utils/formatString";
 
 type NavbarProps = { items: NavItems };
 type ScrollingDirections = "up" | "down" | "none";
 type NavbarContainerProps = { hidden: boolean; transparent: boolean };
 
-export default function Navbar({ items }: NavbarProps) {
+export default function Navbar({ items }: any) {
   const router = useRouter();
   const { toggle } = Drawer.useDrawer();
+  const currentPath = router.asPath;
+  const city = getCityFromPath(
+    currentPath.substring(currentPath.lastIndexOf("/") + 1)
+  );
+
   const [scrollingDirection, setScrollingDirection] =
     useState<ScrollingDirections>("none");
 
@@ -91,8 +98,8 @@ export default function Navbar({ items }: NavbarProps) {
                 console.log("test", router.pathname);
               }}
             >
-              {router.pathname.includes("boston")
-                ? `Boston, MA`
+              {router.pathname !== "/"
+                ? `${formatCityName(city)}`
                 : `24/7 Local Locksmith`}
             </p>
             <div>
@@ -101,7 +108,7 @@ export default function Navbar({ items }: NavbarProps) {
               </svg>
               <span>
                 call us:
-                {router.pathname.includes("boston") ? (
+                {router.pathname !== "/" ? (
                   <p>(617) 816-0505</p>
                 ) : (
                   <p>(800) 687-0480</p>

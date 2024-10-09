@@ -75,11 +75,3 @@ export const getServerSideProps: GetServerSideProps<
     },
   };
 };
-// export const getStaticPaths = async () => {
-//   const slugs = await getAllServiceSlugs();
-
-//   return {
-//     paths: slugs?.map(({ slug }) => `/services/${slug}`) || [],
-//     fallback: true,
-//   };
-// };
