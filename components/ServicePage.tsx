@@ -68,7 +68,7 @@ export default function ServicePage(props: PostPageProps) {
               <PostTitle>Loading…</PostTitle>
             ) : (
               <Wrapper>
-                <BackLink href="/services" className="mr-auto">
+                <BackLink href="/" className="mr-auto">
                   <BackIcon
                     width={isMobile ? 30 : 50}
                     height={isMobile ? 30 : 50}

@@ -63,7 +63,7 @@ export default function Slider() {
     color: white;
 
     /* When screen is less or equal to desktop */
-    ${media("<largeDesktop")} {
+    ${media(">=desktop")} {
       font-size: 3.3rem;
     }
     /* when screen is less than tablet */
