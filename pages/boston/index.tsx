@@ -24,7 +24,7 @@ import OurTeam from "@/views/AboutPage/OurTeam";
 import Tabs from "@/components/Tabs";
 import TextWrapper from "@/components/TextWrapper";
 import { PortableText } from "@portabletext/react";
-import { description } from "../lib/demo.data";
+import { description } from "@/lib/demo.data";
 import PostBody from "@/components/PostBody";
 import { useRouter } from "next/router";
 
@@ -86,11 +86,6 @@ const ServiceButton = styled.button`
   padding: 10px 10px;
   font-weight: bold;
   font-size: 2rem;
-  transition: all ease-in-out;
-  &:hover {
-    scale: 1.03;
-    background-color: #b8c0c9;
-  }
 `;
 
 const DarkerBackgroundContainer = styled.div`
