@@ -17,7 +17,7 @@ import { HamburgerIcon } from "./HamburgerIcon";
 import Logo from "./Logo";
 // import { HoverUnderlineAnimation } from 'utils/styled-animations';
 import NextImage from "next/image";
-import { cities } from "@/utils/cities";
+import { cities, findSubdomain } from "@/utils/cities";
 import { formatCityName, getCityFromPath } from "@/utils/formatString";
 
 type NavbarProps = { items: NavItems };
@@ -31,7 +31,7 @@ export default function Navbar({ items }: any) {
   const city = getCityFromPath(
     currentPath.substring(currentPath.lastIndexOf("/") + 1)
   );
-
+  const cityObject = findSubdomain(city);
   const [scrollingDirection, setScrollingDirection] =
     useState<ScrollingDirections>("none");
 
@@ -92,14 +92,9 @@ export default function Navbar({ items }: any) {
         </NextLink>
         <NavContainer>
           <NavItemList>
-            <p
-              className="var"
-              onClick={() => {
-                console.log("test", router.pathname);
-              }}
-            >
+            <p className="var">
               {router.pathname !== "/"
-                ? `${formatCityName(city)}`
+                ? `${cityObject!.city}`
                 : `24/7 Local Locksmith`}
             </p>
             <div>
@@ -109,7 +104,7 @@ export default function Navbar({ items }: any) {
               <span>
                 call us:
                 {router.pathname !== "/" ? (
-                  <p>(617) 816-0505</p>
+                  <p>{`${cityObject!.phone}`}</p>
                 ) : (
                   <p>(800) 687-0480</p>
                 )}

@@ -34,10 +34,8 @@ const client = getClient();
 export default function Homepage({
   services,
   testimonials,
-  city,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const router = useRouter();
-  console.log("cities:", city);
   return (
     <>
       <Head>
@@ -121,13 +119,10 @@ const WhiteBackgroundContainer = styled.div`
 
 export async function getServerSideProps(ctx: any) {
   const { draftMode = false, params = {} } = ctx;
-  const citiesData = cities;
-  const city = citiesData.find((data: any) => data.city === params.city);
   return {
     props: {
       posts: await getAllPosts(client),
       services: await getAllServices(client),
-      city,
       testimonials: await getAllTestimonials(client),
     },
   };
