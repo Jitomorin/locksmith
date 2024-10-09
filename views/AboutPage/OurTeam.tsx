@@ -1,7 +1,10 @@
 import NextImage from "next/image";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import { A11y, Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Container from "components/Container";
@@ -52,7 +55,10 @@ export default function OurTeam({ testimonials }: any) {
         <Swiper
           modules={[Navigation, Autoplay, A11y]}
           slidesPerView={1}
-          autoplay
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           centeredSlides
           navigation={isMobile}
           loop
@@ -60,13 +66,6 @@ export default function OurTeam({ testimonials }: any) {
           {testimonials.map((employee: any, idx: any) => (
             <SwiperSlide key={idx}>
               <OurteamCard>
-                {/* <NextImage
-                  src={singleTestimonial.companyLogoUrl}
-                  alt={`${singleTestimonial.author.name}'s company logo`}
-                  width={200}
-                  height={40}
-                />
-                <Content>“{singleTestimonial.content}”</Content> */}
                 <AuthorContainer>
                   <AuthorImageContainer>
                     <NextImage

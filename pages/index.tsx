@@ -175,7 +175,7 @@ export default function Homepage({
             </ServiceButton>
             <ServiceButton
               onClick={() => {
-                router.push(`/coupon`);
+                router.push(`/coupons`);
               }}
             >
               <div className="h-20 w-20">
