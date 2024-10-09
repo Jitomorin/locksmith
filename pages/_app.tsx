@@ -71,7 +71,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="https://fonts.gstatic.com"
           crossOrigin=""
         />
-        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="icon" type="image/png" href="/logos/LOGO.png" />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-6WCSKJXF5T"

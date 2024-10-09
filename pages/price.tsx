@@ -94,7 +94,7 @@ const Price = () => {
                               price.amount.includes(" - ") ? (
                                 <>
                                   {price.amount.split(" - ")[0]}
-                                  {"-"}
+                                  {" -"}
                                   <span className="pl-1 pt-1.5 text-gray-500 font-normal text-base">
                                     $
                                   </span>{" "}
@@ -138,13 +138,13 @@ const Price = () => {
                   </div>
                   <div className="pt-2">
                     <a
-                      href="/billing"
+                      href="/contact"
                       type="button"
                       target="_blank"
                       className="appearance-none inline-flex hover:shadow-2xl transition-all duration-300 hover:scale-105 items-center group space-x-2.5 bg-[#751318] text-white py-4 px-5 rounded-2xl cursor-pointer"
                     >
                       <span className="w-full font-semibold text-base">
-                        Choose
+                        Inquire
                       </span>
                       <svg
                         className="inline-block h-6"

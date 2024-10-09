@@ -151,8 +151,10 @@ const ListItemWrapper = styled.p`
   a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.75);
+    transition: all ease-in-out 0.4s;
     &:hover {
-      color: rgba(255, 175, 1);
+      color: white;
+      font-weight: bold;
     }
   }
 `;
