@@ -52,7 +52,7 @@ const Coupons = () => {
               onClick={() => {
                 handlePrint(coupon);
               }}
-              className="hover:cursor-pointer"
+              className="hover:cursor-pointer hover:scale-[1.03] transition-all ease-in-out"
             >
               <img className="w-full h-full object-cover" src={coupon.src} />
             </div>
