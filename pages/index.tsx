@@ -27,6 +27,7 @@ import { PortableText } from "@portabletext/react";
 import { description } from "../lib/demo.data";
 import PostBody from "@/components/PostBody";
 import { useRouter } from "next/router";
+import About from "@/components/About";
 
 const client = getClient();
 
@@ -193,11 +194,14 @@ export default function Homepage({
         </WhiteBackgroundContainer>
         <DarkerBackgroundContainer>
           {/* <StyledTabs /> */}
-          <Cta />
-
+          <PaymentContainer>
+            <img src="/header-payment.webp" />
+          </PaymentContainer>
+          <About />
           {/* <ScrollableBlogPosts posts={posts} /> */}
           <OurTeam testimonials={testimonials} />
           {/* <BlogPostSlider posts={posts} /> */}
+          <Cta />
         </DarkerBackgroundContainer>
       </HomepageWrapper>
     </>
@@ -209,6 +213,14 @@ const HomepageWrapper = styled.div`
     margin-bottom: 15rem;
   }
 `;
+const PaymentContainer = styled.div`
+  width: 100%;
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const ServiceButton = styled.button`
   display: flex;
   justify-content: start;

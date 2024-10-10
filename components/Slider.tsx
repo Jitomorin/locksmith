@@ -14,7 +14,7 @@ export default function Slider() {
   `;
 
   const Container = styled.div`
-    background: rgb(10, 49, 97, 0.8);
+    background: transparent;
     width: 100%;
     position: relative;
     display: flex;
