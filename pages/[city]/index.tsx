@@ -214,11 +214,11 @@ export default function Homepage({
         </WhiteBackgroundContainer>
         <DarkerBackgroundContainer>
           {/* <StyledTabs /> */}
-          <Cta />
 
           {/* <ScrollableBlogPosts posts={posts} /> */}
           <OurTeam testimonials={testimonials} />
           {/* <BlogPostSlider posts={posts} /> */}
+          <Cta />
         </DarkerBackgroundContainer>
       </HomepageWrapper>
     </>
