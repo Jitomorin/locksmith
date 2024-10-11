@@ -60,7 +60,7 @@ export default function OurTeam({ testimonials }: any) {
             disableOnInteraction: false,
           }}
           centeredSlides
-          navigation={isMobile}
+          navigation={false}
           loop
         >
           {testimonials.map((employee: any, idx: any) => (
