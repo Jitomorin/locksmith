@@ -1,5 +1,5 @@
 import { media } from "@/utils/media";
-import Container from "components/BlogContainer";
+// import Container from "components/BlogContainer";
 import Layout from "components/BlogLayout";
 import PostBody from "components/PostBody";
 import PostTitle from "components/PostTitle";
@@ -12,6 +12,7 @@ import ServiceHeader from "./ServiceHeader";
 import Link from "next/link";
 import { BackIcon } from "./BackIcon";
 import { useEffect, useState } from "react";
+import { NormalContainer } from "./BlogContainer";
 
 export interface PostPageProps {
   preview?: boolean;
@@ -60,7 +61,7 @@ export default function ServicePage(props: PostPageProps) {
       <Layout preview={preview} loading={loading}>
         <ServicePageWrapper>
           <div
-            className="container justify-start
+            className=" justify-start
          mx-auto px-16 md:px-10"
           >
             {/* <BlogHeader title={title} level={2} /> */}
@@ -121,4 +122,4 @@ const ServiceContainer = styled.div`
     flex-direction: column;
   }
 `;
-const ServicePageWrapper = styled(Container)``;
+const ServicePageWrapper = styled(NormalContainer)``;
