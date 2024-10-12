@@ -84,9 +84,14 @@ const PaymentContainer = styled.div`
   /* width: 100%; */
   display: flex;
   justify-content: center;
+  margin: 2rem 0;
   align-items: center;
+  border-left: solid 1px #83838390;
   img {
     margin-bottom: auto;
+  }
+  ${media("<largeDesktop")} {
+    border-left: none;
   }
 `;
 const SubTitle = styled.h2`

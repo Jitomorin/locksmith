@@ -208,7 +208,8 @@ const NavContainer = styled.div`
     /* color: white; */
     display: flex;
     margin-left: 1rem;
-    ${media("<=phone")} {
+    align-items: center;
+    ${media("<tablet")} {
       font-size: 1rem;
     }
   }

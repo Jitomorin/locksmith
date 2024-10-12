@@ -31,7 +31,7 @@ export default function Slider() {
     display: inline-block;
     text-align: center;
     align-self: center;
-    max-width: 14em;
+    /* max-width: 14em; */
     position: relative;
     font-size: 6rem;
     margin-bottom: 2rem;
