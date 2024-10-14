@@ -34,9 +34,9 @@ const About = () => {
           </Description>
         </ReversedRow>
       </Container>
-      <PaymentContainer>
+      {/* <PaymentContainer>
         <img src="/header-payment.webp" />
-      </PaymentContainer>
+      </PaymentContainer> */}
     </Wrapper>
   );
 };
@@ -44,7 +44,7 @@ const About = () => {
 export default About;
 
 const Wrapper = styled.div`
-  padding: 4rem 10rem;
+  padding: 4rem 0rem;
   height: 100%;
   width: 100%;
   display: flex;
