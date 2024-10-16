@@ -18,9 +18,10 @@ export default function Slider() {
     width: 100%;
     position: relative;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     padding: 0 0rem;
-    height: 300px;
+    height: 80vh;
     ${media("<tablet")} {
       height: 200px;
     }
