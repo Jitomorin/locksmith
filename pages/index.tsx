@@ -54,7 +54,7 @@ export default function Homepage({
 
           {/* <Divider /> */}
           {/* <ServicesSection title="We offer these professional services"></ServicesSection> */}
-          <div className="xl:flex lg:space-x-0 pl-5 space-y-2 lg:space-y-0">
+          <div className="xl:flex xl:align-top lg:space-x-0 pl-5 space-y-2 lg:space-y-0">
             <ServicesGrid services={services} />
             <PaymentContainer>
               <img src="/header-payment.webp" />
@@ -147,11 +147,11 @@ const WhiteBackgroundContainer = styled.div`
   padding-right: 0rem;
 
   & > :last-child {
-    padding-bottom: 15rem;
+    /* padding-bottom: 15rem; */
   }
 
   & > *:not(:first-child) {
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 `;
 

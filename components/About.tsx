@@ -12,7 +12,7 @@ const About = () => {
           locksmith services to keep you safe and secure.
         </SubTitle> */}
         <Row>
-          <img className="image" src="/institute-certified-locksmiths.webp" />
+          {/* <img className="image" src="/institute-certified-locksmiths.webp" /> */}
           <Description>
             Oscar’s Lock & Key Services has unique security demands based on its
             location,industry, size and operations. Partnering with Oscar’s Lock
@@ -23,7 +23,7 @@ const About = () => {
           </Description>
         </Row>
         <ReversedRow>
-          <img className="image" src="/burglar-fire-alarm-association.webp" />
+          {/* <img className="image" src="/burglar-fire-alarm-association.webp" /> */}
 
           <Description>
             Protecting your property or business from threats is a top priority
