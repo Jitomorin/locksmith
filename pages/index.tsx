@@ -57,7 +57,7 @@ export default function Homepage({
           <div className="xl:flex xl:align-top lg:space-x-0 pl-5 space-y-2 lg:space-y-0">
             <ServicesGrid services={services} />
             <PaymentContainer>
-              <img src="/header-payment.webp" />
+              <img src="/payment.png" />
             </PaymentContainer>
           </div>
         </WhiteBackgroundContainer>
@@ -76,6 +76,8 @@ export default function Homepage({
 }
 
 const HomepageWrapper = styled.div`
+  max-width: 100vw;
+  overflow: hidden;
   & > :last-child {
     margin-bottom: 15rem;
   }
@@ -84,13 +86,14 @@ const HomepageWrapper = styled.div`
 export const PaymentContainer = styled.div`
   /* width: 100%; */
   display: flex;
-  justify-content: center;
+  justify-content: start;
   margin-top: 2rem;
   /* margin: 2rem 0; */
-  align-items: center;
+  align-items: start;
   /* border-left: solid 1px #83838390; */
   img {
     margin-bottom: auto;
+    padding: 0;
   }
   ${media("<largeDesktop")} {
     /* border-left: none; */
