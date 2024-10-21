@@ -1,11 +1,41 @@
-import { ServiceButton } from "@/pages";
 import { useRouter } from "next/router";
 import React from "react";
+import styled from "styled-components";
+
+const ServiceButton = styled.button`
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: white;
+  background-color: #0a3161;
+  height: 100px;
+  width: 300px;
+  padding: 10px 10px;
+  margin: auto 0;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: all ease-in-out 0.5s;
+  text-align: left;
+  &:hover {
+    scale: 1.03;
+    background-color: #751318;
+  }
+  div {
+    margin-left: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  span {
+    margin-left: 2rem;
+  }
+`;
 
 const ServicesGrid = ({ services }: any) => {
   const router = useRouter();
   return (
-    <div className="grid grid-cols-1  sm:grid-cols-3 lg:grid-cols-4 gap-1 max-w-[90%] lg:max-h-96 my-0 mx-auto">
+    <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 max-w-[85%] xl:max-h-96 my-0 mx-auto">
       <div className="p-2 h-auto flex justify-center">
         <ServiceButton
           onClick={() => {
@@ -68,13 +98,13 @@ const ServicesGrid = ({ services }: any) => {
             router.push(`/services/${services[0].slug.current}`);
           }}
         >
-          <div className="w-7 h-7">
+          <div className="w-20 h-20">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               fill="white"
-              viewBox="0 0 128 512"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
             >
-              <path d="M96 64c0-17.7-14.3-32-32-32S32 46.3 32 64l0 256c0 17.7 14.3 32 32 32s32-14.3 32-32L96 64zM64 480a40 40 0 1 0 0-80 40 40 0 1 0 0 80z" />
+              <path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
             </svg>
           </div>
 

@@ -31,6 +31,7 @@ import { useRouter } from "next/router";
 import About from "@/components/About";
 import { media } from "@/utils/media";
 import ServicesGrid from "@/components/ServicesGrid";
+import TextBubble from "@/components/TextBubble";
 
 const client = getClient();
 
@@ -54,11 +55,15 @@ export default function Homepage({
 
           {/* <Divider /> */}
           {/* <ServicesSection title="We offer these professional services"></ServicesSection> */}
-          <div className="xl:flex xl:align-top lg:space-x-0 pl-5 space-y-2 lg:space-y-0">
+          <div className="xl:flex xl:align-top lg:space-x-0 pl-5 xl:px-5 space-y-2 lg:space-y-0 max-w-full">
             <ServicesGrid services={services} />
-            <PaymentContainer>
-              <img src="/payment.png" />
-            </PaymentContainer>
+            <PaymentBox>
+              <PaymentContainer>
+                <img src="/payment.png" />
+              </PaymentContainer>
+              <TextBubble />
+              <img src="/logos/LOGO.png" />
+            </PaymentBox>
           </div>
         </WhiteBackgroundContainer>
         <DarkerBackgroundContainer>
@@ -99,35 +104,10 @@ export const PaymentContainer = styled.div`
     /* border-left: none; */
   }
 `;
-
-export const ServiceButton = styled.button`
+export const PaymentBox = styled.div`
   display: flex;
-  justify-content: start;
+  flex-direction: column;
   align-items: center;
-  color: white;
-  background-color: #0a3161;
-  height: 100px;
-  width: 300px;
-  padding: 10px 10px;
-  margin: auto 0;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 2rem;
-  transition: all ease-in-out 0.5s;
-  text-align: left;
-  &:hover {
-    scale: 1.03;
-    background-color: #1456a8;
-  }
-  div {
-    margin-left: 1rem;
-    color: white;
-    display: flex;
-    align-items: center;
-  }
-  span {
-    margin-left: 2rem;
-  }
 `;
 
 const DarkerBackgroundContainer = styled.div`
