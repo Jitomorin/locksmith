@@ -28,8 +28,9 @@ import { description } from "@/lib/demo.data";
 import PostBody from "@/components/PostBody";
 import { useRouter } from "next/router";
 import { cities } from "@/utils/cities";
-import { PaymentContainer, ServiceButton } from "@/pages/index";
+import { PaymentBox, PaymentContainer } from "@/pages/index";
 import ServicesGrid from "@/components/ServicesGrid";
+import TextBubble from "@/components/TextBubble";
 
 const client = getClient();
 
@@ -52,11 +53,15 @@ export default function Homepage({
           <Slider />
 
           <Divider />
-          <div className="xl:flex lg:space-x-0 pl-5 space-y-2">
+          <div className="xl:flex xl:align-top lg:space-x-0 pl-5 xl:px-5 space-y-2 lg:space-y-0 max-w-full">
             <ServicesGrid services={services} />
-            <PaymentContainer>
-              <img src="/header-payment.webp" />
-            </PaymentContainer>
+            <PaymentBox>
+              <PaymentContainer>
+                <img src="/payment.png" />
+              </PaymentContainer>
+              <TextBubble />
+              <img src="/logos/LOGO.png" />
+            </PaymentBox>
           </div>
         </WhiteBackgroundContainer>
         <DarkerBackgroundContainer>
