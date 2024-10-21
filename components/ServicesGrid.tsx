@@ -15,7 +15,7 @@ const ServiceButton = styled.button`
   margin: auto 0;
   border-radius: 5px;
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: bolder;
   transition: all ease-in-out 0.5s;
   text-align: left;
@@ -120,7 +120,7 @@ const ServicesGrid = ({ services }: any) => {
             router.push(`/services/${services[4].slug.current}`);
           }}
         >
-          <div className="h-14 w-14">
+          <div className="h-20 w-20">
             <svg
               fill="white"
               xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +138,7 @@ const ServicesGrid = ({ services }: any) => {
             router.push(`/services/${services[2].slug.current}`);
           }}
         >
-          <div className="w-10 h-w-10">
+          <div className="w-20 h-w-20">
             <svg
               fill="white"
               xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +158,7 @@ const ServicesGrid = ({ services }: any) => {
             router.push(`/price`);
           }}
         >
-          <div className="h-10 w-10">
+          <div className="h-16 w-16">
             <svg
               fill="white"
               xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +177,7 @@ const ServicesGrid = ({ services }: any) => {
             router.push(`/coupons`);
           }}
         >
-          <div className="h-20 w-20">
+          <div className="h-24 w-24">
             <svg
               fill="white"
               xmlns="http://www.w3.org/2000/svg"

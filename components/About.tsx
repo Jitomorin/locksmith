@@ -2,6 +2,13 @@ import { media } from "@/utils/media";
 import React from "react";
 import styled from "styled-components";
 
+const list = [
+  "The protection of your property or business?",
+  "The support of qualified locksmith service?",
+  "A group of trusted, insured and highly skilled locksmith professionals?",
+  "Rendering our services with competitive pricing?",
+];
+
 const About = () => {
   return (
     <Wrapper>
@@ -23,14 +30,38 @@ const About = () => {
           </Description>
         </Row>
         <ReversedRow>
-          {/* <img className="image" src="/burglar-fire-alarm-association.webp" /> */}
-
           <Description>
             Protecting your property or business from threats is a top priority
             for everybody. Hiring our experienced locksmiths is a critical step
             in achieving that goal. Our team can provide a comprehensive range
             of services, from lock installations and rekeying to master key
             system implementation and emergency lockout assistance.
+          </Description>
+        </ReversedRow>
+        <ReversedRow>
+          <Description>
+            <span>{`OUR MISSION – `}</span>
+            Partnering with Oscar's Lock & Key Services ensures you receive
+            personalized security solutions tailored to your specific needs.
+            <br />
+            <br />
+            <span>{`OUR VISION - `}</span>
+            With the support of qualified locksmiths, you can make right
+            decisions and maximize the effictiveness of your security
+            investments.
+            <br />
+            <br />
+            <br />
+            <h1>Are you looking for</h1>
+            <div className="flex flex-col space-y-4">
+              {list.map((text: string) => (
+                <div className="flex space-x-2">
+                  <img className="w-10" src="/logos/LOGO-bullet.png" />
+                  <p>{`${text}`}</p>
+                </div>
+              ))}
+            </div>
+            <h2>Don't Wait, Reach Out To Oscar's Lock & Key Services!</h2>
           </Description>
         </ReversedRow>
       </Container>
@@ -142,7 +173,23 @@ const Description = styled.span`
   font-weight: normal;
   /* margin: 10rem 10rem; */
   font-family: "Poppins", sans-serif;
+  span {
+    font-weight: bold;
+    font-size: 2rem;
+  }
 
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: #15233e;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 3rem;
+    margin-top: 2rem;
+    color: #15233e;
+    font-weight: bold;
+  }
   ${media("<=tablet")} {
     font-size: 14px;
     margin: 5rem 1rem;
