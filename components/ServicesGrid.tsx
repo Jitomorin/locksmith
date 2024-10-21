@@ -6,6 +6,7 @@ const ServiceButton = styled.button`
   display: flex;
   justify-content: start;
   align-items: center;
+  text-transform: uppercase;
   color: white;
   background-color: #0a3161;
   height: 100px;
@@ -14,7 +15,8 @@ const ServiceButton = styled.button`
   margin: auto 0;
   border-radius: 5px;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  font-weight: bolder;
   transition: all ease-in-out 0.5s;
   text-align: left;
   &:hover {

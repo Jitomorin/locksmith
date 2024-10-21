@@ -92,7 +92,7 @@ export const PaymentContainer = styled.div`
   /* width: 100%; */
   display: flex;
   justify-content: start;
-  margin-top: 2rem;
+  margin-top: -3.5rem;
   /* margin: 2rem 0; */
   align-items: start;
   /* border-left: solid 1px #83838390; */
@@ -101,7 +101,7 @@ export const PaymentContainer = styled.div`
     padding: 0;
   }
   ${media("<largeDesktop")} {
-    /* border-left: none; */
+    margin-top: 0rem;
   }
 `;
 export const PaymentBox = styled.div`

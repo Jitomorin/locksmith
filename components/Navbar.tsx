@@ -90,41 +90,35 @@ export default function Navbar({ items }: any) {
             <Logo />
           </LogoWrapper>
         </NextLink>
-        <NavContainer>
-          <NavItemList>
-            <p className="var">
-              {router.pathname !== "/"
-                ? `${
-                    cityObject?.city ? cityObject?.city : `24/7 Local Locksmith`
-                  }`
-                : `24/7 Local Locksmith`}
-            </p>
-            <div>
-              <svg
-                fill="#751318"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-              >
-                <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
-              </svg>
-              <span>
-                <span className="phone mx-0 px-0">call us:</span>
+        <p className="var">
+          {router.pathname !== "/"
+            ? `${cityObject?.city ? cityObject?.city : `24/7 Local Locksmith`}`
+            : `24/7 Local Locksmith`}
+        </p>
+        <div>
+          <svg
+            fill="#751318"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+          </svg>
+          <span>
+            <span className="phone mx-0 px-0">call us:</span>
 
-                {router.pathname !== "/" ? (
-                  <>
-                    {cityObject?.phone ? (
-                      <p className="num">{cityObject?.phone}</p>
-                    ) : (
-                      <p className="num">(800) 687-0480</p>
-                    )}
-                  </>
+            {router.pathname !== "/" ? (
+              <>
+                {cityObject?.phone ? (
+                  <p className="num">{cityObject?.phone}</p>
                 ) : (
-                  <p>(800) 687-0480</p>
+                  <p className="num">(800) 687-0480</p>
                 )}
-              </span>
-            </div>
-          </NavItemList>
-        </NavContainer>
+              </>
+            ) : (
+              <p>(800) 687-0480</p>
+            )}
+          </span>
+        </div>
 
         {/* <HamburgerMenuWrapper>
           <HamburgerIcon aria-label="Toggle menu" onClick={toggle} />
@@ -159,6 +153,7 @@ const NavItemList = styled.div`
   /* background-color: greenyellow; */
   display: flex;
   list-style: none;
+  width: 100%;
   font-size: 2rem;
   /* color: white; */
   div {
@@ -196,6 +191,7 @@ const NavContainer = styled.div`
   display: flex;
   list-style: none;
   font-size: 2rem;
+  width: 100%;
   /* color: white; */
   div {
     display: flex;
@@ -329,8 +325,41 @@ const NavbarContainer = styled.div<NavbarContainerProps>`
 `;
 
 const Content = styled(Container)`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  font-size: 2rem;
+  /* color: white; */
+  div {
+    display: flex;
+  }
+  svg {
+    color: #751318;
+    width: 20px;
+    margin-right: 4px;
+  }
+  span {
+    /* color: white; */
+    display: flex;
+    /* margin-left: 1rem; */
+  }
+  .var {
+    margin-right: 1rem;
+    color: #000;
+  }
+  .num {
+    color: #000;
+  }
+  .phone {
+    color: #751318;
+  }
+  p {
+    /* color: white; */
+
+    font-weight: 800;
+  }
+  ${media("<desktop")} {
+  }
 `;
