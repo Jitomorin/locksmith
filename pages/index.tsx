@@ -56,7 +56,10 @@ export default function Homepage({
           {/* <Divider /> */}
           {/* <ServicesSection title="We offer these professional services"></ServicesSection> */}
           <div className="xl:flex xl:align-top lg:space-x-0 pl-5 xl:px-5 space-y-2 lg:space-y-0 max-w-full">
-            <ServicesGrid services={services} />
+            <div className="flex flex-col">
+              <ServicesGrid services={services} />
+              <About />
+            </div>
             <PaymentBox>
               <PaymentContainer>
                 <img src="/payment.png" />
@@ -69,7 +72,7 @@ export default function Homepage({
         <DarkerBackgroundContainer>
           {/* <StyledTabs /> */}
 
-          <About />
+          {/* <About /> */}
           {/* <ScrollableBlogPosts posts={posts} /> */}
           <OurTeam testimonials={testimonials} />
           {/* <BlogPostSlider posts={posts} /> */}
