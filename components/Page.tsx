@@ -59,7 +59,7 @@ const HeaderContainer = styled.div<{ imgURL: string }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 25rem;
+  min-height: 268px;
   background: rgb(21, 35, 62, 0.8);
   margin: 0 auto;
   padding: 0 2rem;
