@@ -66,6 +66,7 @@ export default function Homepage({
               </PaymentContainer>
               <TextBubble />
               <img src="/logos/LOGO.png" />
+              <img className="mt-0 xl:mt-24 xl:block hidden" src="/lock.png" />
             </PaymentBox>
           </div>
         </WhiteBackgroundContainer>
