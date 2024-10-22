@@ -13,6 +13,7 @@ import { useRouter } from "next/router";
 import service from "@/sanity/schemas/service";
 import ServicePage from "@/components/ServicePage";
 import Page from "@/components/Page";
+import { urlForImage } from "@/sanity/lib/image";
 
 // interface pageProps extends SharedPageProps {
 //     service: Service;
@@ -39,14 +40,17 @@ const Title = styled.div`
 export default function ServiceSlugRoute(props: ServiceProps) {
   const router = useRouter();
   const { service } = props;
+  const source = service.coverImage.asset?._ref;
+  console.log("service", service);
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
   return (
     <Page
-      title={"Services"}
+      title={service.title}
       description={service.description}
-      imgURL="/services_stock.webp"
+      isService
+      imgURL={urlForImage(source).height(1000).width(2000).url()}
     >
       <ServicePage service={service} />
     </Page>

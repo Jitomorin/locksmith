@@ -360,6 +360,7 @@ const Content = styled(Container)`
 
     font-weight: 800;
   }
-  ${media("<desktop")} {
+  ${media("<=phone")} {
+    font-size: 1rem;
   }
 `;

@@ -15,9 +15,9 @@ export default function ServiceHeader(
       <div className="mb-8 sm:mx-0 md:mb-16 h-auto">
         <CoverImage title={title!} image={coverImage} priority slug={slug} />
       </div>
-      <h1 className="mb-12 text-center text-5xl font-bold leading-tight tracking-tighter md:text-left md:text-6xl md:leading-none lg:text-7xl">
+      {/* <h1 className="mb-12 text-center text-5xl font-bold leading-tight tracking-tighter md:text-left md:text-6xl md:leading-none lg:text-7xl">
         {title}
-      </h1>
+      </h1> */}
       {/* <div className="hidden md:mb-12 md:block">
         {author && <Avatar name={author.name} picture={author.picture} />}
       </div>
