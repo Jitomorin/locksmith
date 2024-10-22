@@ -37,7 +37,7 @@ const ServiceButton = styled.button`
 const ServicesGrid = ({ services }: any) => {
   const router = useRouter();
   return (
-    <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 max-w-[85%] xl:max-h-96 my-0 mx-auto">
+    <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 max-w-[92%] xl:max-h-96 my-0 mx-auto">
       <div className="p-2 h-auto flex justify-center">
         <ServiceButton
           onClick={() => {

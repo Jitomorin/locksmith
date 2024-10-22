@@ -85,7 +85,7 @@ export default function Navbar({ items }: any) {
   return (
     <NavbarContainer hidden={isNavbarHidden} transparent={isTransparent}>
       <Content>
-        <NextLink href="/" passHref>
+        <NextLink className="max-h-52" href="/" passHref>
           <LogoWrapper>
             <Logo />
           </LogoWrapper>
@@ -307,7 +307,8 @@ const NavbarContainer = styled.div<NavbarContainerProps>`
   top: 0;
   padding: 1.5rem 0;
   width: 100%;
-  height: 7.2rem;
+  max-height: 7.7rem;
+
   z-index: var(--z-navbar);
 
   background-color: #fff;

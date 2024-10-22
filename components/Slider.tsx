@@ -21,7 +21,7 @@ export default function Slider() {
     justify-content: center;
     flex-direction: column;
     padding: 0 0rem;
-    height: 80vh;
+    height: 60vh;
     ${media("<tablet")} {
       height: 200px;
     }

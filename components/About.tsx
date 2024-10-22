@@ -61,7 +61,7 @@ const About = () => {
                 </div>
               ))}
             </div>
-            <h2>Don't Wait, Reach Out To Oscar's Lock & Key Services!</h2>
+            {/* <h2>Don't Wait, Reach Out To Oscar's Lock & Key Services!</h2> */}
           </Description>
         </ReversedRow>
       </Container>

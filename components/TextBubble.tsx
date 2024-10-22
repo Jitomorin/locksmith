@@ -7,9 +7,9 @@ const Bubble = styled.div`
   color: white;
   padding: 20px;
   border-radius: 15px;
-  min-width: 250px;
+  min-width: 290px;
   font-family: Arial, sans-serif;
-  font-size: 23px;
+  font-size: 20px;
   margin: 20px 0;
 
   &::after {
