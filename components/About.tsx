@@ -54,7 +54,7 @@ const About = () => {
             effectiveness of your security investments.
           </Description>
           <img
-            className="absolute right-16 xl:mt-24 xl:block hidden"
+            className="absolute w-96 top-[1080px] right-[330px] xl:mt-24 xl:block hidden"
             src="/lock.png"
             alt="Lock"
           />
