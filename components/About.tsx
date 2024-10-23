@@ -38,7 +38,7 @@ const About = () => {
                 ))}
               </div>
               <img
-                className=" w-80 my-auto  xl:block hidden"
+                className=" w-96 my-auto  xl:block hidden"
                 src="/lock.png"
                 alt="Lock"
               />
