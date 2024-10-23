@@ -13,31 +13,6 @@ const About = () => {
   return (
     <Wrapper>
       <Container>
-        <Title>About Us</Title>
-        {/* <SubTitle>
-          At Oscar's Locksmith, we provide fast, reliable, and professional
-          locksmith services to keep you safe and secure.
-        </SubTitle> */}
-        <Row>
-          {/* <img className="image" src="/institute-certified-locksmiths.webp" /> */}
-          <Description>
-            Oscar’s Lock & Key Services has unique security demands based on its
-            location,industry, size and operations. Partnering with Oscar’s Lock
-            & Key Services ensures you receive personalized security solutions
-            tailored to your specific needs.With the support of qualified
-            locksmiths, you can make right decisions and maximize the
-            effectiveness of your security investments.
-          </Description>
-        </Row>
-        <ReversedRow>
-          <Description>
-            Protecting your property or business from threats is a top priority
-            for everybody. Hiring our experienced locksmiths is a critical step
-            in achieving that goal. Our team can provide a comprehensive range
-            of services, from lock installations and rekeying to master key
-            system implementation and emergency lockout assistance.
-          </Description>
-        </ReversedRow>
         <ReversedRow>
           <Description>
             <span>{`OUR MISSION – `}</span>
@@ -62,6 +37,35 @@ const About = () => {
               ))}
             </div>
             {/* <h2>Don't Wait, Reach Out To Oscar's Lock & Key Services!</h2> */}
+          </Description>
+        </ReversedRow>
+        <Title>About Us</Title>
+        {/* <SubTitle>
+          At Oscar's Locksmith, we provide fast, reliable, and professional
+          locksmith services to keep you safe and secure.
+        </SubTitle> */}
+        <Row>
+          <Description>
+            Oscar’s Lock & Key Services has unique security demands based on its
+            location,industry, size and operations. Partnering with Oscar’s Lock
+            & Key Services ensures you receive personalized security solutions
+            tailored to your specific needs.With the support of qualified
+            locksmiths, you can make right decisions and maximize the
+            effectiveness of your security investments.
+          </Description>
+          <img
+            className="absolute right-16 xl:mt-24 xl:block hidden"
+            src="/lock.png"
+            alt="Lock"
+          />
+        </Row>
+        <ReversedRow>
+          <Description>
+            Protecting your property or business from threats is a top priority
+            for everybody. Hiring our experienced locksmiths is a critical step
+            in achieving that goal. Our team can provide a comprehensive range
+            of services, from lock installations and rekeying to master key
+            system implementation and emergency lockout assistance.
           </Description>
         </ReversedRow>
       </Container>

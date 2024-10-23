@@ -55,8 +55,8 @@ export default function Homepage({
 
           {/* <Divider /> */}
           {/* <ServicesSection title="We offer these professional services"></ServicesSection> */}
-          <div className="xl:flex xl:align-top lg:space-x-0 pl-5 xl:px-5 space-y-2 lg:space-y-0 max-w-full">
-            <div className="flex flex-col">
+          <div className="xl:flex xl:align-top lg:space-x-0 pl-5 xl:px-5 space-y-2 lg:space-y-0 max-w-[98%]">
+            <div className="flex flex-col ">
               <ServicesGrid services={services} />
               <About />
             </div>
@@ -66,7 +66,6 @@ export default function Homepage({
               </PaymentContainer>
               <TextBubble />
               <img src="/logos/LOGO.png" />
-              <img className="mt-0 xl:mt-24 xl:block hidden" src="/lock.png" />
             </PaymentBox>
           </div>
         </WhiteBackgroundContainer>
@@ -117,6 +116,8 @@ export const PaymentBox = styled.div`
 const DarkerBackgroundContainer = styled.div`
   background: rgb(251, 251, 253);
   display: flex;
+  max-width: 100vw;
+  overflow: hidden;
   flex-direction: column;
   justify-content: center;
   & > *:not(:first-child) {
@@ -129,7 +130,8 @@ const WhiteBackgroundContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
   padding-left: 0rem;
   padding-right: 0rem;
 
