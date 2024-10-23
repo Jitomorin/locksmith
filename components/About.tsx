@@ -28,13 +28,20 @@ const About = () => {
             <br />
             <br />
             <h1>Are you looking for</h1>
-            <div className="flex flex-col space-y-4">
-              {list.map((text: string) => (
-                <div className="flex space-x-2">
-                  <img className="w-10" src="/logos/LOGO-bullet.png" />
-                  <p>{`${text}`}</p>
-                </div>
-              ))}
+            <div className="flex space-x-2 align-middle">
+              <div className="flex flex-col space-y-4">
+                {list.map((text: string) => (
+                  <div className="flex space-x-2">
+                    <img className="w-10" src="/logos/LOGO-bullet.png" />
+                    <p>{`${text}`}</p>
+                  </div>
+                ))}
+              </div>
+              <img
+                className=" w-80 my-auto  xl:block hidden"
+                src="/lock.png"
+                alt="Lock"
+              />
             </div>
             {/* <h2>Don't Wait, Reach Out To Oscar's Lock & Key Services!</h2> */}
           </Description>
@@ -53,11 +60,6 @@ const About = () => {
             locksmiths, you can make right decisions and maximize the
             effectiveness of your security investments.
           </Description>
-          <img
-            className="absolute w-96 top-[1080px] right-[330px] 2xl:top-[1280px] 2xl:right-[1030px] mt-24 xl:block hidden"
-            src="/lock.png"
-            alt="Lock"
-          />
         </Row>
         <ReversedRow>
           <Description>
